@@ -1,0 +1,35 @@
+body {
+  margin: 0 auto;
+}
+
+#background {
+  position: fixed;
+  background-image: url("boombox1.jpg");
+  background-size: cover;
+  width: 80%;
+  height: 100vh;
+  margin-left: 11%;
+}
+
+#nowPlaying {
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  border: 1px solid red;
+  z-index: 10;
+  margin-left: 200px;
+}
+
+#mylist {
+  position: absolute;
+  z-index: 10;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+#play, #back, #next, #stop, #pause, #random {
+  padding: 40px;
+  /*position: fixed;*/
+  z-index: 10;
+  /*margin-left: 100px;*/
+}
