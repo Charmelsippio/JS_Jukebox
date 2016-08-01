@@ -95,7 +95,7 @@ Jukebox.prototype.previousSong = function(){
         _this.current.play();
         _this.src = _this.current.getAttribute('src', _this.myList.value);
         _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
-      } else if (_this.index > 0 && _this.index < 11) {
+      } else if (_this.index > 0 && _this.index > 11) {
         _this.index -= 1;
         _this.current.setAttribute('src', _this.playlist[_this.index]);
         _this.current.play();
