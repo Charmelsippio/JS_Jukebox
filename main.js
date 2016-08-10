@@ -1,7 +1,3 @@
-// $(document).ready(function(){
-
-    //page load code
-    // $('body').toggleClass('loading')
 
    function Jukebox(){
     this.playlist = [
@@ -46,16 +42,11 @@
 Jukebox.prototype.play_song = function(){
   var _this = this;
     this.myList.addEventListener('change', function(){
-
       _this.current.setAttribute('src', _this.myList.value)
-
       _this.src = _this.current.getAttribute('src');
-
       _this.index = _this.playlist.indexOf(_this.src);
-
       _this.current.play();
-
-      _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+      _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
     });
 }
 
@@ -68,19 +59,19 @@ Jukebox.prototype.nextSong = function(){
         _this.current.setAttribute('src', _this.playlist[0]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
-      } else if (_this.index < 12) {
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
+      } else if ( _this.index < 12) {
         _this.index +=1;
         _this.current.setAttribute('src', _this.playlist[_this.index]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       } else if (_this.index == 11) {
         _this.index = 0; 
         _this.current.setAttribute('src', _this.playlist[_this.index]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       };
 
     });
@@ -94,19 +85,19 @@ Jukebox.prototype.previousSong = function(){
         _this.current.setAttribute('src', _this.playlist[11]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src', _this.myList.value);
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       } else if (_this.index > 0 && _this.index < 12) {
         _this.index -= 1;
         _this.current.setAttribute('src', _this.playlist[_this.index]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       } else if (_this.index == 0){
         _this.index = 11;
         _this.current.setAttribute('src', _this.playlist[_this.index]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       };
     });
 };
@@ -116,6 +107,7 @@ Jukebox.prototype.stopSong = function(){
   var stopButton = document.getElementById('stop');
     stopButton.addEventListener('click', function(){
       _this.current.pause();
+      _this.current = 0;
     });
 };
 
@@ -135,11 +127,11 @@ Jukebox.prototype.songPlay = function(){
         _this.current.setAttribute('src', _this.playlist[0]);
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       } else {
         _this.current.play();
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       }
     });
 };
@@ -158,7 +150,7 @@ Jukebox.prototype.randomSong = function(){
         _this.index = 0
         _this.current = _this.playlist[0].play()
         _this.src = _this.current.getAttribute('src');
-        _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+        _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
       } else {
         for(i = 0; i < newArray.length; i++){
           if(_this.index == i) {
@@ -166,7 +158,7 @@ Jukebox.prototype.randomSong = function(){
           } else {
             _this.current = _this.playlist[_this.index].play();
             _this.src = _this.current.getAttribute('src');
-            _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+            _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
           }
         }
       }
@@ -182,12 +174,12 @@ Jukebox.prototype.autoNext = function(){
           _this.index += 1
           _this.current.setAttribute('src', _this.playlist[_this.index]);
           _this.current.play();
-          _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+          _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
         } else if(_this.index == 11){
           _this.index = 0
           _this.current.setAttribute('src', _this.playlist[_this.index]);
           _this.current.play();
-          _this.nowPlaying.innerHTML = "<h4 id'info_display'>" + _this.display[_this.index] + "</h4>"
+          _this.nowPlaying.innerHTML = "<h4 id='info_display'>" + _this.display[_this.index] + "</h4>"
         };
     });
 };
@@ -202,10 +194,13 @@ mixTape.stopSong()
 mixTape.randomSong()
 mixTape.autoNext()
 
-// });
 
-
-
+$("#buttonMenu").click(function () {
+  if ($("#mylist").hasClass("songListup"))
+      $("#mylist").removeClass("songListup").addClass("songListdown");
+  else
+      $("#mylist").removeClass("songListdown").addClass("songListup");
+});
 
 
 
