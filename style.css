@@ -20,7 +20,7 @@ body {
   position:fixed;
   z-index: -10;
   margin-top: 289px;
-  margin-left: 455px;
+  margin-left: 464px;
 }
 
 #nowPlaying {
@@ -37,8 +37,8 @@ body {
 button {
   position: fixed;
   background-color: rgba(192,192,192,0.3);
-  margin-top: 165px;
-  margin-left: 905px;
+  margin-top: 168px;
+  margin-left: 918px;
   width: 75px;
   height: 40px;
   border-radius: 2px;
@@ -80,8 +80,8 @@ button {
   z-index: 10;
   background-color: black;
   color: white;
-  margin-top: 233px;
-  margin-left: 903px;
+  margin-top: 236px;
+  margin-left: 917px;
 }
 
 .songListup, .songListdown {
@@ -100,44 +100,44 @@ button {
 /*playback buttons*/
 #random{
 /*  position: fixed;*/
-  margin-left: 483px;
+  margin-left: 498px;
   z-index: 10;
-  margin-top: 618px;
+  margin-top: 625px;
 }
 
 #play {
 /*  position: fixed;*/
-  margin-left: 535px;
+  margin-left: 541px;
   z-index: 10;
-  padding-top: 618px;
+  padding-top: 625px;
 }
 
 #back {
 /*  position: fixed;*/
-  margin-left: 578px;
+  margin-left: 586px;
   z-index: 10;
-  padding-top: 618px;
+  padding-top: 625px;
 }
 
 #next {
 /*  position: fixed;*/
-  margin-left: 630px;
+  margin-left: 638px;
   z-index: 10;
-  padding-top: 617px;
+  padding-top: 625px;
 }
 
 #stop {
 /*  position: fixed;*/
-  margin-left: 675px;
+  margin-left: 685px;
   z-index: 10;
-  padding-top: 616px;
+  padding-top: 624px;
 }
 
 #pause {
 /*  position: fixed;*/
-  margin-left: 725px;
+  margin-left: 734px;
   z-index: 10;
-  padding-top: 615px;
+  padding-top: 623px;
 }
 
 div {
