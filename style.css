@@ -28,8 +28,8 @@ body {
   height: 60px;
   width: 342px;
   z-index: 10;
-  margin-left: 441px;
-  margin-top: 255px;
+  margin-left: 450px;
+  margin-top: 257px;
   background-color: rgba(192,192,192,0.3);
   text-align: center;
 }
@@ -98,11 +98,12 @@ button {
 }
 
 /*playback buttons*/
+
 #random{
 /*  position: fixed;*/
-  margin-left: 498px;
+  margin-left: 490px;
   z-index: 10;
-  margin-top: 625px;
+  margin-top: 626px;
 }
 
 #play {
